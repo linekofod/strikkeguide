@@ -1,0 +1,444 @@
+:root{
+    --backgroundColor: #F2F2F2; 
+    --gulColor: #EDEAE5;
+    --brunColor: #D9D5D2;
+    --blåColor: #CDD7DB;
+    --grønColor: #CACBC5;   
+    }
+    
+    @font-face { 
+        font-family: 'Cormorant SC';
+        src: url(../fonts/CormorantSC-Regular.woff2);
+    }
+    @font-face {
+        font-family: 'Cormorant';
+        src: url(../fonts/Cormorant-Regular.woff2);
+    }
+    @font-face {
+        font-family: 'Cormorant semibold';
+        src: url(../fonts/Cormorant-SemiBold.woff2);
+    }
+    @font-face {
+        font-family: 'Cinzel';
+        src: url(../fonts/CinzelDecorative-Regular.woff2);
+    }
+    @font-face {
+        font-family: 'Cinzel bold';
+        src: url(../fonts/CinzelDecorative-Bold.woff2);
+    }
+    /* baskerville font{
+    font-family: baskerville-display-pt, serif;
+    font-style: normal;
+    font-weight: 400;
+    } */
+
+    body{
+        background-color: var(--backgroundColor);
+    }
+    h1{
+        font-family: Cormorant SC;
+        font-size: clamp(2.6rem, 4vw, 5rem);
+        font-weight: normal;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    h2{
+        font-family: Cormorant semibold;
+        font-size: clamp(1.5rem, 2vw, 3rem);
+        font-weight: normal;
+        padding-bottom: 2px;
+    }
+    h3{
+        font-family: Cormorant semibold;
+        font-size: clamp(1.2rem, 1.8vw, 2rem);
+        font-weight: normal;
+        padding-bottom: 2px;
+    }
+    p{
+        font-family: Cormorant;
+        font-size: clamp(1rem, 1.2vw, 1.9rem);
+        line-height: 24px;
+    }
+    a{
+        color: black;
+    }
+    a:hover{
+        font-weight: 700;
+    }
+    footer{
+        font-family: Cormorant SC;
+        font-weight: normal;
+        padding: 10px;
+    }
+    .til_toppen a{
+        text-decoration: none;
+        font-family: Cormorant SC;
+        font-weight: normal;
+    }
+
+    /* Navigation og dropdown */
+
+    nav ul{
+        list-style: none;
+    }
+    #options1, #options2{
+        padding: 10px 25px;
+    }
+    #options1 a, #options2 a{
+        font-family: Cormorant;
+        font-size: clamp(0.8rem, 1.1vw, 1.3rem);
+        line-height: 35px;
+    }
+    #forside_option{
+        padding-bottom: 15px;
+    }
+    .menu-icon{
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .arrow {
+        border: solid black;
+        border-width: 0 1.5px 1.5px 0;
+        display: inline-block;
+        padding: 4px;
+        margin: 2px 5px;
+      }
+    .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    .up{
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+    }
+    #STEPS, #GUIDES{
+        cursor: default;
+    }
+    nav a{
+        font-family: Cormorant;
+        font-size: clamp(0.9rem, 1.2vw, 1.4rem);
+        text-decoration: none;
+        color: black;
+      }
+    nav a:hover{
+        border-bottom: 1px solid black;
+        font-weight: normal;
+    }
+    #options1 a:hover, #options2 a:hover{
+        border-bottom: 0;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    .logo :first-child{
+        font-family: Cinzel bold;
+        color: black;
+        text-decoration: none;
+        font-size: clamp(0.9rem, 1.2vw, 1.4rem);
+        border-bottom: 0;
+    }
+    .logo :last-child{
+        border-bottom: 0;
+        font-family: Cinzel;
+        color: black;
+        text-decoration: none;
+        font-size: clamp(0.8rem, 1vw, 1.2rem);
+    }
+    
+    /* Forside */
+    
+    .h1_forside{
+        background-color: var(--backgroundColor);
+    }
+    .tekstboks_grøn{
+        background-color: var(--grønColor);
+        border-radius: 20px;
+        padding: 10px 40px;
+    }
+    .tekstboks_grøn p{
+        font-size: clamp(1.6rem, 2.4vw, 3rem);
+        line-height: 36px;
+    }
+    .link_grøn{
+        background-color: var(--grønColor);
+        font-family: Cormorant SC;
+        font-size: clamp(1rem, 1.5vw, 2.2rem);
+        border-radius: 10px;
+        padding: 10px 25px;
+    }
+    .link_grøn a:link{
+        color: black;
+        text-decoration: none;
+    }
+    .link_grøn:hover{
+        color: black;
+        box-shadow: 2px 2px 2px 2px #989A8D;
+    }
+    .link_grøn a:hover{
+        font-weight: normal;
+    } 
+    .link_grøn a:visited{
+        color: black;
+    }
+    
+    /* Step 1 */
+
+    .overskrift_brun{
+        background-color: var(--brunColor);
+    }
+    .tekstboks_brun{
+        background-color: var(--brunColor);
+        border-radius: 20px;
+        padding: 10px 25px;
+    }
+
+    /* Step 2 */
+
+    .overskrift_gul{
+        background-color: var(--gulColor)
+    }
+    .tekstboks_gul{
+        background-color: var(--gulColor);
+        border-radius: 20px;
+        padding: 10px 25px;
+    }
+
+    /* Step 3 */
+
+    .tips{
+        background-color: var(--backgroundColor);
+        border: 2px solid var(--grønColor);
+        border-radius: 10px;
+        padding: 10px 25px;
+    }
+    #hover_1 a:link{
+        font-weight: 700;
+        text-decoration: none;
+    }
+    #hover_1 a:hover{
+        font-weight: 700;
+    }
+    #hover_2 a:link{
+        font-weight: 700;
+        text-decoration: none;
+    }
+    #hover_2 a:hover{
+        font-weight: 700;
+    }
+
+    /* Step 4 */
+
+    #hover_3 a:link{
+        font-weight: 700;
+        text-decoration: none;
+    }
+    #hover_3 a:hover{
+        font-weight: 700;
+    }
+
+    /* Garn alternativer */
+
+    .overskrift_blå{
+        background-color: var(--blåColor);
+    }
+    .tekstboks_blå{
+        background-color: var(--blåColor);
+        border-radius: 20px;
+        padding: 10px 25px;
+    }
+    #hover_4 a:link{
+        font-weight: 700;
+        text-decoration: none;
+    }
+    #hover_4 a:hover{
+        font-weight: 700;
+    }
+    #h2_6-1, #h2_6-1-1{
+        padding: 0;
+    }
+    .garnberegner{
+        background-color: var(--backgroundColor);
+        border: 4px solid var(--blåColor);
+        padding: 5px 20px 40px 20px; 
+    }
+    .garnberegner label {
+        font-family: Cormorant;
+        font-size: clamp(1rem, 1.3vw, 2rem);
+      }
+    .garnberegner .input1 {
+        padding: 8px;
+        border: 1px solid var(--blåColor);
+        border-radius: 3px;
+      }
+    .garnberegner ::placeholder {
+        font-family: baskerville-display-pt, serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(0.8rem, 1.1vw, 1.4rem);
+    }
+    .garnberegner button{
+        font-family: Cormorant;
+        font-size: clamp(1rem, 1.3vw, 2rem);
+        padding: 6px;
+        background-color: var(--blåColor);
+        color: black;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .garnberegner button:hover{
+        background-color: #bbc4c8;
+    }
+    #beregner_eksempel input{
+        cursor: default;
+    }
+    #beregner_eksempel button{
+        cursor: default;
+    }
+    #beregner_eksempel button:hover{
+        background-color: var(--blåColor);
+    }
+
+    /* Basisstrik */
+
+    .skema{
+        background-color: var(--blåColor);
+        padding-bottom: 25px;
+    }
+    #h2_7-5{
+        padding-top: 25px;
+    }
+
+    /* Vask af strik */
+
+    #video_5{
+        background-color: var(--blåColor);
+    }
+
+    /* Inspiration */
+
+    .galleri p{
+        border: 2px solid var(--brunColor);
+        padding: 15px 25px;
+        border-radius: 5px; 
+        height: 70%;
+    }
+    
+    @media screen and (max-width: 599px){
+        .menu{
+            background-color: var(--backgroundColor);
+            padding: 20px 0 20px 25px;
+        }
+    }
+
+    @media (min-width: 600px){
+
+        p{
+            line-height: 27px;
+        }
+       
+        /* Navigation og dropdown */
+
+        nav li ul{
+        border: 2px solid var(--grønColor);
+        background-color: var(--backgroundColor);
+        }
+        
+        /* Forside */
+
+        .tekstboks_grøn p{
+            line-height: 60px;
+        }
+        
+        /* Step 1 */
+
+        .tekstboks_brun{
+            padding: 18px 45px;
+        }
+        h2{
+            padding-bottom: 0;
+            padding-left: 24px;
+        }
+        .link_grøn{
+            height: fit-content;
+        }
+
+        /* Step 2 */
+
+        .tekstboks_gul{
+            padding: 18px 45px;
+        }
+        .tips{
+            background-color: var(--backgroundColor);
+            border: 2px solid var(--grønColor);
+            border-radius: 10px;
+            padding: 18px 45px;
+        }
+
+        /* Step 3 */
+
+        #hover_1 a:link{
+            font-weight: 700;
+            text-decoration: underline;
+        }
+        #hover_1 a:hover{
+            font-weight: 700;
+        }
+        #hover_2 a:link{
+            font-weight: 700;
+            text-decoration: underline;
+        }
+        #hover_2 a:hover{
+            font-weight: 700;
+        }
+
+        /* Step 4 */
+
+        #hover_3 a:link{
+            font-weight: 700;
+            text-decoration: underline;
+        }
+        #hover_3 a:hover{
+            font-weight: 700;
+        }
+        
+        /* Garn alternativer */
+
+        #hover_4 a:link{
+            font-weight: 700;
+            text-decoration: underline;
+        }
+        #hover_4 a:hover{
+            font-weight: 700;
+        }
+        .garnberegner{
+            padding: 5px 40px 40px 50px; 
+        }
+
+        /* Basisstrik */
+
+        #video_1{
+            background-color: var(--blåColor);
+        }
+        #video_2{
+            background-color: var(--blåColor);
+        }
+        #video_3{
+            background-color: var(--blåColor);
+        }
+        #video_4{
+            background-color: var(--blåColor);
+        }
+        .skema{
+            background-color: var(--blåColor);
+            padding-bottom: 35px;
+            padding-left: 32%
+        }
+        #h2_7-5{
+            padding-top: 35px;
+        }
+
+        /* Inspiration */
+
+        .galleri{
+            padding: 10px;
+        }
+    }

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="icon" type="image/png" href="images/yarn_favicon.png" />
+    <title>Garn alternativer</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">Strikkeguide</a>
+          <br />
+          <a href="index.html">Step by step</a>
+        </div>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">
+          <li id="forside_option"><a href="index.html">FORSIDE</a></li>
+          <li>
+            <a id="STEPS" href="step_1.html"
+              ><div>STEPS <i class="arrow down"></i></div
+            ></a>
+            <ul id="options1">
+              <li><a href="step_1.html">STEP 1 - VALG AF OPSKRIFT</a></li>
+              <li>
+                <a href="step_2.html">STEP 2 - INDKØB AF GARN OG REDSKABER</a>
+              </li>
+              <li><a href="step_3.html">STEP 3 - LAV EN STRIKKEPRØVE</a></li>
+              <li><a href="step_4.html">STEP 4 - FØLG OPSKRIFTEN</a></li>
+              <li>
+                <a href="step_5.html">STEP 5 - TILLYKKE, DU ER FÆRDIG!</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a id="GUIDES" href="garn_alternativer.html"
+              ><div>GUIDES <i class="arrow down"></i></div
+            ></a>
+            <ul id="options2">
+              <li><a href="garn_alternativer.html">GARN ALTERNATIVER</a></li>
+              <li><a href="basisstrik.html">BASISSTRIK</a></li>
+              <li><a href="vask_af_strik.html">VASK AF STRIK</a></li>
+            </ul>
+          </li>
+          <li><a href="inspiration.html">INSPIRATION</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="overskrift_blå" id="top_6">Garn alternativer</h1>
+      <section class="grid_1-1">
+        <div class="tekstboks_blå" id="blå_1">
+          <p>
+            For at kunne bruge noget andet garn end hvad opskriften foreslår,
+            skal du være sikker på, at du får den helt rigtige mængde af garn.
+          </p>
+          <p>
+            Dette gør du ved at kigge på hvor meget garn du skal bruge til din
+            størrelse i opskriften, samt garnets løbelængde på det foreslået
+            garn og det nye garn du gerne vil bruge.
+          </p>
+          <p class="tekst_indryk" id="hover_4">
+            - <a href="#tip_4">Hvad er løbelængde?</a>
+          </p>
+          <div class="tips" id="tip_4">
+            <h3>Hvad er løbelængde?</h3>
+            <p>
+              Løbelængden beskriver, hvor mange meter garn der er i forhold til
+              vægten af garnet.
+            </p>
+            <p class="tekst_indryk">
+              - Eksempel: <br />Garnets løbelængde er på (50 g = 110 m).
+              <br />Dette vil sige, at der er 110 meter garn pr. 50 gram.
+            </p>
+          </div>
+          <p>
+            Du kan beregne mængden af garn du skal bruge til dit strikkeprojekt
+            i min garnberegner.
+          </p>
+        </div>
+
+        <form class="garnberegner">
+          <h2 id="h2_6-1">GARNBEREGNER:</h2>
+          <label for="gram1" id="label1"
+            >Mængden af garn jeg skal bruge til min størrelse:</label
+          ><br />
+          <input
+            class="input1"
+            type="text"
+            id="gram1"
+            placeholder="GRAM"
+          /><br />
+
+          <label for="meter1" id="label2"
+            >Løbelængden på det <strong>foreslået garn</strong> i opskriften: </label
+          ><br />
+          <input class="input1" type="text" id="meter1" placeholder="METER" />
+
+          <label for="gram2" class="pr">pr:</label>
+          <input
+            class="input1"
+            type="text"
+            id="gram2"
+            placeholder="GRAM"
+          /><br />
+
+          <label for="meter2" id="label3"
+            >Løbelængden på mit <strong>nye garn</strong>:</label
+          ><br />
+          <input class="input1" type="text" id="meter2" placeholder="METER" />
+
+          <label for="gram3" class="pr">pr:</label>
+          <input
+            class="input1"
+            type="text"
+            id="gram3"
+            placeholder="GRAM"
+          /><br />
+
+          <button type="button" id="sum-button1">
+            Med mit nye garn skal jeg bruge:
+          </button>
+          <output id="sum1">0</output>
+          <label for="sum1">gram garn</label>
+
+          <br />
+          <button type="button" id="sum-button2">Dette svarer til:</button>
+          <output id="sum2">0</output>
+          <label for="sum2">nøgler garn</label>
+        </form>
+
+        <script>
+          var gram1 = document.getElementById("gram1");
+          var meter1 = document.getElementById("meter1");
+          var gram2 = document.getElementById("gram2");
+          var meter2 = document.getElementById("meter2");
+          var gram3 = document.getElementById("gram3");
+          var sum = document.getElementById("sum");
+          var sumButton1 = document.getElementById("sum-button1");
+          var sumButton2 = document.getElementById("sum-button2");
+
+          function addNumbers1() {
+            var a = Number(gram1.value);
+            var b = Number(meter1.value);
+            var c = Number(gram2.value);
+            var d = Number(meter2.value);
+            var e = Number(gram3.value);
+
+            var f = (((a / c) * b) / d) * e;
+
+            sum1.value = f.toFixed();
+          }
+
+          sumButton1.addEventListener("click", addNumbers1);
+
+          function addNumbers2() {
+            var a = Number(gram1.value);
+            var b = Number(meter1.value);
+            var c = Number(gram2.value);
+            var d = Number(meter2.value);
+            var e = Number(gram3.value);
+
+            var f = (((a / c) * b) / d) * e;
+            var h = f / e;
+
+            sum2.value = h.toFixed(1);
+          }
+          sumButton2.addEventListener("click", addNumbers2);
+        </script>
+        <div class="huskebokse">
+          <p class="tekstboks_blå" id="husk_1">
+            Antal nøgler skal altid rundes op.
+          </p>
+          <p class="tekstboks_blå" id="husk_2">
+            Husk at teste strikkefastheden med dit nye garn!
+          </p>
+        </div>
+        <img
+          id="img_9"
+          src="images/garn_hænder.webp"
+          alt="Hænder, der holder tre garnnøgler"
+        />
+      </section>
+      <section class="grid_1-1">
+        <h2 id="h2_6-2">GØR SOM MIG:</h2>
+        <div class="tekstboks_blå" id="blå_2">
+          <p>
+            Se hvordan jeg omregner til et nyt garn til opskriften “Holiday
+            Slipover”:
+          </p>
+          <p>
+            I opskriften står der, at jeg til en størrelse (S) skal bruge
+            <strong>300</strong> gram garn af et foreslået garn med løbelængden
+            (<strong>50 g</strong> = <strong>110 m</strong>).
+          </p>
+          <p>
+            Jeg har fundet et andet garn, som minder om det, men som er
+            billigere. Dette garn har løbelængden (<strong>50 g</strong> = ca.
+            <strong>70 m</strong>)
+          </p>
+          <p>Jeg sætter tallene ind i garnberegneren:</p>
+        </div>
+        <form class="garnberegner" id="beregner_eksempel">
+          <h2 id="h2_6-1-1">GARNBEREGNER - eksempel:</h2>
+          <label for="gram1" id="label1-1"
+            >Mængden af garn jeg skal bruge til min størrelse:</label
+          ><br />
+          <input
+            class="input1"
+            type="text"
+            id="gram1-1"
+            placeholder="300"
+            readonly
+          /><br />
+
+          <label for="meter1" id="label2-1"
+            >Løbelængden på det <strong>foreslået garn</strong> i opskriften: </label
+          ><br />
+          <input
+            class="input1"
+            type="text"
+            id="meter1-1"
+            placeholder="110"
+            readonly
+          />
+
+          <label for="gram2" class="pr">pr:</label>
+          <input
+            class="input1"
+            type="text"
+            id="gram2-1"
+            placeholder="50"
+            readonly
+          /><br />
+
+          <label for="meter2" id="label3-1"
+            >Løbelængden på mit <strong>nye garn</strong>:</label
+          ><br />
+          <input
+            class="input1"
+            type="text"
+            id="meter2-1"
+            placeholder="70"
+            readonly
+          />
+
+          <label for="gram3" class="pr">pr:</label>
+          <input
+            class="input1"
+            type="text"
+            id="gram3-1"
+            placeholder="50"
+            readonly
+          /><br />
+
+          <button type="button" id="sum-button1-1">
+            Med mit nye garn skal jeg bruge:
+          </button>
+          <output id="sum1-1">471</output>
+          <label for="sum1">gram garn</label>
+
+          <br />
+          <button type="button" id="sum-button2-1">Dette svarer til:</button>
+          <output id="sum2-1">9.4</output>
+          <label for="sum2">nøgler garn</label>
+        </form>
+        <div>
+          <p class="tekstboks_blå" id="husk_3">
+            - Ud fra beregningen, skal jeg købe 9,4 nøgler =
+            <strong>10 nøgler</strong> af mit nye garn.
+          </p>
+        </div>
+
+        <img
+          id="img_10"
+          src="images/pinde_hænder.webp"
+          alt="Hænder, der holder to garnnøgler med strikkepinde i"
+        />
+      </section>
+      <div class="til_toppen">
+        <a href="#top_6">Til toppen <i class="arrow up"></i></a>
+      </div>
+    </main>
+    <footer>© 2023, Line Kofod Thomsen</footer>
+  </body>
+</html>

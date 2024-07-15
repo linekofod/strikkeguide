@@ -1,0 +1,641 @@
+img{
+    max-width: 100%;
+}
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100dvh;
+}
+h1{
+    margin-bottom: 50px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; 
+}
+h2{ 
+    margin-left: 30px;
+}
+.tekst_indryk{
+    margin-left: 30px;
+}
+.til_toppen{
+    margin: 50px 20px 20px 0;
+    display: flex;
+    justify-content: right;
+}
+
+/* Navigation og dropdown */
+header nav{
+    display: flex;
+    justify-content: space-between;
+}
+#options1{
+    width: 340px;
+}
+#options2{
+    width: 200px;
+}
+.menu{
+    margin-right: 30px;
+    margin-top: 22px;
+    display: flex;
+}
+.menu-icon{
+    display: none;
+}
+.logo{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/* Forside */
+
+.h1_forside{
+    justify-content: left;
+    margin: 10px;
+    margin-left: 10%;
+}
+.tekstboks_grøn{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.link_grøn{
+    width: fit-content;
+}
+#link_1{
+    margin-left: 15%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+/* Step 1 */
+
+.tekstboks_brun{
+    margin: 5%;
+    width: fit-content;
+}
+.link_grøn{
+    margin-left: 40px;
+}
+
+/* Step 2 */
+
+.tekstboks_gul{
+    margin: 5%;
+    width: fit-content;
+}
+#img_4{
+    margin-top: 20px;
+}
+
+/* Step 3 */
+
+.tips{
+    margin: 5%;
+    width: fit-content;
+}
+
+/* Step 4 */
+
+#img_7{
+    margin-top: 20px;
+}
+
+/* Garn alternativer */
+
+.tekstboks_blå{
+    margin: 5%;
+    width: fit-content;
+}
+.garnberegner {
+    width: fit-content;
+  }
+.garnberegner label {
+    display: inline-block;
+    width: fit-content;
+}
+#label1, #label1-1{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+#label2, #label2-1{
+    margin-top: 28px;
+    margin-bottom: 8px;
+}
+#label3, #label3-1{
+    margin-top: 22px;
+    margin-bottom: 8px;
+}
+.garnberegner .input1{
+    width: 20%;
+}
+.pr{
+    margin: 10px;
+}
+.garnberegner button {
+    margin-top: 25px;
+}  
+output{
+    margin: 5px;
+}
+#h2_6-2{
+    margin-top: 10%;
+    margin-left: 5%;
+}
+#h2_6-1, #h2_6-1-1{
+    margin-left: 0;
+}
+
+/* Basisstrik */
+
+.videos{
+    display: flex;
+        justify-content: center;
+}
+#h2_basisstrik h2{
+    margin-top: 10%;
+}
+.skema img{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+#h2_7-5{
+    margin-top: 10%;
+}
+
+/* Vask af strik */
+
+#video_5{
+    display: flex;
+    justify-content: center;
+}
+
+/* Inspiration */
+
+.galleri p{
+    width: 88%;
+}
+.galleri{
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 599px) {
+    .menu{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 58px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        margin: 0;
+    }
+    .menu.show{
+        display: flex;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #menu-toggle[type="checkbox"]{
+        display: none;
+    }
+    #menu-toggle[type="checkbox"]:checked+.menu-icon+.menu{
+        display: flex;
+    }
+    #menu-toggle, .menu-icon{
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+}
+
+@media (min-width: 600px){
+
+    h1{
+        margin-top: 0;
+    }
+
+    /* Navigation og dropdown */
+
+    #menu-toggle[type="checkbox"] {
+        display: none;
+    }
+
+    nav>ul{
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+    }
+    .menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 500px;
+    }
+    nav>li{
+        position: relative
+    }
+    nav li ul{
+        position: absolute;
+        right: 35px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        visibility: hidden;
+        margin-top: 10px;
+    }
+    nav li:hover ul{
+        visibility: visible;
+    }
+
+    /* Forside */
+
+    .grid_1-1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5em;
+    }
+    .tekstboks_grøn{
+        grid-column: 1;
+        grid-row: 2;
+        width: 55%;
+    }
+    #img_1{
+        grid-column: 2;
+        grid-row: 1/span 4;
+        /* margin-top: 20px; */
+    }
+    .h1_forside{
+        grid-column: 1;
+        grid-row: 1;
+        margin-bottom: 0;
+    }
+    #link_1{
+        grid-column: 1;
+        margin-left: 15%;
+        margin-top: 0;
+    }
+
+    /* Step 1 */
+
+    #img_2{
+        grid-column: 1;
+        grid-row: 1/span 6;
+    }
+    h2{
+        margin: 0;
+        margin-top: 30px;
+        display: flex;
+        align-items: end;
+    }
+    .tekstboks_brun{
+        margin: 0;
+        margin-right: 5%;
+        height: fit-content;
+        width: 70%;
+    }
+    .link_grøn{
+        margin-left: 25px;
+    }
+    .til_toppen{
+        visibility: hidden;
+    }
+    #img_2{
+        margin-left: 5%;
+    }
+
+    /* Step 2 */
+
+    #img_3{
+        grid-column: 2;
+        grid-row: 1/span 2;
+    }
+    .tekstboks_gul{
+        margin: 0;
+        margin-left: 5%;
+        height: fit-content;
+        width: 70%;
+    }
+    #gul_1{
+       margin-left: 10%;
+    }
+    #h2_2-1{
+        margin-left: 10%;
+    }
+    #img_4{
+        grid-column: 1;
+        grid-row: 1/span 3;
+        margin-top: 10%;
+    }
+    #link_3{
+        grid-column: 2;
+        margin-left: 10%;
+    }
+    #h2_2-2{
+        margin-top: 15%;
+        margin-left: 5%;
+    }
+    #tip_1{
+        grid-column: 2;
+
+    }
+    #tip_2{
+        grid-column: 2;
+
+    }
+
+    /* Step 3 */
+
+    #img_5{
+        grid-column: 1;
+        grid-row: 1/span 5;
+        margin-top: 10%;
+    }
+    #brun_3{
+        margin-left: 5%;
+    }
+    #brun_4{
+        margin-left: 5%;
+    }
+    #h2_3-1{
+        margin-left: 5%;
+    }
+    #h2_3-2{
+        margin-left: 5%;
+    }
+    #link_4{
+        margin-left: 10%;
+    }
+    .tips{
+        margin-left: 5%;
+        width: 50%
+    }
+    #tip_1{
+        margin-top: 50px;
+        position: absolute;
+        bottom: 25px; left: 50px;
+        visibility: hidden;
+    }
+    #tip_2{
+        margin-top: 0;
+        position: absolute;
+        top: 450px;
+        visibility: hidden;
+    }
+    .tips>h3{
+        margin-top: 18px;
+    }
+    #brun_3{
+        position: relative
+    }
+    #hover_1:hover + #tip_1{
+        visibility: visible;
+    }
+    #hover_1 a:link{
+        font-weight: 700;
+    }
+    #hover_2:hover + #tip_2{
+        visibility: visible;
+    }
+    #hover_2 a:link{
+        font-weight: 700;
+    }
+
+    /* Step 4 */
+
+    #img_6{
+        grid-column: 1;
+        grid-row: 1/span 5;
+    }
+    #tip_3{
+        position: absolute;
+        width: 29%;
+        top: 390px; right: 60px;
+        visibility: hidden;
+    }
+    #hover_3 a:link{
+        font-weight: 700;
+    }
+    #hover_3:hover + #tip_3{
+        visibility: visible;
+    }
+    #img_note{
+        visibility: hidden;
+    }
+    #h2_4-1{
+        margin-left: 5%;
+    }
+    #link_5{
+        margin-left: 10%;
+    }
+
+    /* Step 5 */
+
+    #img_8{
+        grid-column: 2;
+        grid-row: 1/span 3;
+    }
+    #h2_5-1{
+        grid-column: 1;
+        margin-left: 10%;
+        margin-top: 20%;
+    }
+    #brun_5{
+        grid-column: 1;
+        grid-row: 2;
+        margin-left: 8%;
+    }
+
+    /* Garn alternativer */
+
+    #blå_1{
+        grid-column: 1;
+        margin-bottom: 15px;
+    }
+    #img_9{
+        grid-column: 2;
+        grid-row: 1/span 5;
+    }
+    #husk_1{
+        margin: 0 0 10px 50px;
+    }
+    #husk_2{
+        margin: 20px 0 10px 50px;
+    }
+    #husk_3{
+        margin: 0 0 10px 50px;
+    }
+    #img_10{
+        grid-column: 1;
+        grid-row: 1/span 5;
+        margin-top: 8%;
+    }
+    #blå_2{
+        margin-bottom: 15px;
+        margin-left: 5%;
+        margin-top: 0;
+        height: fit-content;
+        width: 80%;
+    }
+    #tip_4{
+        position: absolute;
+        width: 27%;
+        top: 425px; left: 20px;
+        visibility: hidden;
+    }
+    #hover_4 a:link{
+        font-weight: 700;
+    }
+    #hover_4:hover + #tip_4{
+        visibility: visible;
+    }
+    #h2_6-1, #h2_6-1-1{
+        margin-bottom: 20px;
+    }
+    .garnberegner {
+        margin-left: 50px;
+    }
+
+    /* Basisstrik */
+
+    #video_1{
+        grid-column: 1;
+        grid-row: 2;
+        display: flex;
+        justify-content: center;
+        margin: 0 30px;
+    }
+    #video_2{
+        grid-column: 2;
+        grid-row: 2;
+        display: flex;
+        justify-content: center;
+        margin: 0 30px;
+    }
+    #video_3{
+        grid-column: 1;
+        grid-row: 4;
+        display: flex;
+        justify-content: center;
+        margin: 0 30px;
+    }
+    #video_4{
+        grid-column: 2;
+        grid-row: 4;
+        display: flex;
+        justify-content: center;
+        margin: 0 30px;
+    }
+    #h2_basisstrik h2{
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+    .skema img{
+        justify-content: center;
+        width: 50%
+    }
+    #h2_7-5{
+        margin-top: 5%;
+        margin-left: 5%;
+    }
+
+    /* Vask af strik */
+
+    #blå_3{
+        margin: 0;
+        margin-left: 5%;
+        margin-top: 10%;
+        height: fit-content;
+        width: 80%;
+    }
+    #video_5{
+        margin-right: 30px;
+    }
+
+    /* Inspiration */
+
+    .grid_1-1-1{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5em;
+    }
+    #img_galleri_1{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #galleri_1{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #img_galleri_2{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    #galleri_2{
+        grid-column: 2;
+        grid-row: 2;
+    }
+    #img_galleri_3{
+        grid-column: 3;
+        grid-row: 1;
+    }
+    #galleri_3{
+        grid-column: 3;
+        grid-row: 2;
+    }
+    #img_galleri_4{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    #galleri_4{
+        grid-column: 1;
+        grid-row: 4;
+    }
+    #img_galleri_5{
+        grid-column: 2;
+        grid-row: 3;
+    }
+    #galleri_5{
+        grid-column: 2;
+        grid-row: 4;
+    }
+    #img_galleri_6{
+        grid-column: 3;
+        grid-row: 3;
+    }
+    #galleri_6{
+        grid-column: 3;
+        grid-row: 4;
+    }
+    #img_galleri_7{
+        grid-column: 1;
+        grid-row: 5;
+    }
+    #galleri_7{
+        grid-column: 1;
+        grid-row: 6;
+    }
+    #img_galleri_8{
+        grid-column: 2;
+        grid-row: 5;
+    }
+    #galleri_8{
+        grid-column: 2;
+        grid-row: 6;
+    }
+    #img_galleri_9{
+        grid-column: 3;
+        grid-row: 5;
+    }
+    #galleri_9{
+        grid-column: 3;
+        grid-row: 6;
+    }
+    .galleri{
+        display: flex;
+        align-items: end;
+        margin-bottom: 0;
+    }
+    
+}
